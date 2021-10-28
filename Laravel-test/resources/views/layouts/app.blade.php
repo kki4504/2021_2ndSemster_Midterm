@@ -28,9 +28,18 @@
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main id="app">
                 {{ $slot }}
             </main>
         </div>
     </body>
+    <script>
+        function confirmDelete(e) {
+          myform = document.getElementById('form');
+          flag = confirm('정말 삭제하시겠습니까? ..');
+          if(flag) {
+            myform.submit();
+          }
+        }
+    </script>
 </html>
